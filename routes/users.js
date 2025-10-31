@@ -93,11 +93,12 @@ router.get('/:id', async (req, res) => {
         email: true,
         name: true,
         image: true,
-        filmes: {
+        /*filmes: {
           select: {
             filme: true
           }
         }
+      */
       }
     });
     user.image = await fileHandler(req, user);
